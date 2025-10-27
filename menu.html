@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Menú Degustación - Epicurio</title>
+  <style>
+    body {
+      background-color: #fff8e1;
+      font-family: "Georgia", serif;
+      color: #5b3a00;
+      padding: 20px;
+    }
+    h1 {
+      color: #bfa145;
+      text-align: center;
+    }
+    .paso {
+      border-bottom: 1px dashed #bfa145;
+      padding: 10px 0;
+    }
+    .celíaco, .mesa-dulce {
+      background-color: #fff3cd;
+      padding: 15px;
+      margin-top: 30px;
+      border: 1px solid #bfa145;
+      border-radius: 8px;
+    }
+    a {
+      display: block;
+      text-align: center;
+      margin-top: 30px;
+      color: #bfa145;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .lang-btn {
+      float: right; 
+      background-color:#B8860B; 
+      color:white; 
+      border:none; 
+      padding:0.5rem 1rem; 
+      border-radius:5px; 
+      cursor:pointer;
+    }
+  </style>
+</head>
+<body>
+  <button class="lang-btn" onclick="cambiarIdioma()">🌐 EN/ES</button> 
+
+  <h1 data-es="Menú de 7 Pasos - Epicurio" data-en="7-Course Tasting Menu - Epicurio">Menú de 7 Pasos - Epicurio</h1>
+
+  <div class="paso"><strong data-es="Paso 1:" data-en="Step 1:">Paso 1:</strong> <span data-es="bocadito: tartaleta de queso azul y cebolla caramelizada" data-en="bite: blue cheese tartlet with caramelized onion">bocadito: tartaleta de queso azul y cebolla caramelizada</span></div>
+
+  <div class="paso"><strong data-es="Paso 2:" data-en="Step 2:">Paso 2:</strong> <span data-es="Mousse de palta lima con tomate confitado y polvo de aceitunas" data-en="Avocado-lime mousse with confit tomato and olive powder">Mousse de palta lima con tomate confitado y puerro de aceitunas</span></div>
+
+  <div class="paso"><strong data-es="Paso 3:" data-en="Step 3:">Paso 3:</strong> <span data-es="Trilogía de rebosados:" data-en="Trilogy of battered bites:">Trilogía de rebosados:</span>
+    <ul>
+      <li data-es="camarón rebosado" data-en="battered shrimp">camarón rebosado</li>
+      <li data-es="croqueta" data-en="croquette">croqueta</li>
+      <li data-es="huevo de codorniz" data-en="quail egg">huevo de codorniz</li>
+    </ul>
+  </div>
+
+  <div class="paso"><strong data-es="Paso 4:" data-en="Step 4:">Paso 4:</strong> <span data-es="Ensalada de frutas y verduras asadas" data-en="Salad of roasted fruits and vegetables">Ensalada de frutas y verduras asadas</span></div>
+
+  <div class="paso"><strong data-es="Paso 5:" data-en="Step 5:">Paso 5:</strong> <span data-es="Magret de pato con reducción de frutos rojos" data-en="Duck magret with red fruit reduction">Magret de pato con reducción de frutos rojos</span></div>
+
+  <div class="paso"><strong data-es="Paso 6:" data-en="Step 6:">Paso 6:</strong> <span data-es="Carpaccio de piña marinada con ron, con ralladura de lima" data-en="Pineapple carpaccio marinated in rum with lime zest">Carpaccio de piña marinada con ron, con ralladura de lima</span></div>
+
+  <div class="paso"><strong data-es="Paso 7:" data-en="Step 7:">Paso 7:</strong> <span data-es="Mesa dulce" data-en="Dessert table">Mesa dulce</span></div>
+  
+  <h2 data-es="Bebidas / Maridaje" data-en="Drinks / Pairing">Bebidas / Maridaje</h2>
+   <div class="bebida"><strong data-es="Lista de bebidas:" data-en="Drinks list:">Lista de bebidas:</strong> </div>
+   <ul>
+       <li data-es="Expreso martini" data-en="Espresso martini">Expreso martini</li>
+       <li data-es="Sweet shot" data-en="Sweet shot">Sweet shot</li>
+       <li data-es="Mojito de albahaca" data-en="Basil mojito">Mojito de albahaca</li>
+       <li data-es="Bonzana" data-en="Bonzana">Bonzana</li>
+   </ul>
+
+   <div class="celíaco">
+      <h2 data-es="Solicitar menú adaptado a personas celíacas" data-en="Request gluten-free adapted menu">Solicitar menú adaptado a personas celíacas</h2>
+      <p data-es="En el caso de solicitar un menú adaptado se le dispondrá una nueva carta sin perder la esencia del menú concertado" 
+         data-en="If you request an adapted menu, a new menu will be provided without losing the essence of the set menu.">
+         En el caso de solicitar un menú adaptado se le dispondrá una nueva carta sin perder la esencia del menú concertado
+      </p>
+   </div>
+   
+  <div class="mesa-dulce">
+    <h2 data-es="Mesa Dulce" data-en="Dessert Table">Mesa Dulce</h2>
+    <p data-es="Variedad de postres. Adaptado para personas celíacas si se solicita." data-en="Variety of desserts. Adapted for celiac guests upon request.">Variedad de postres. Adaptado para personas celíacas si se solicita.</p>
+  </div>
+
+  <a href="index.html" data-es="← Volver a la página principal" data-en="← Back to main page">← Volver a la página principal</a>
+
+<script>
+let idiomaActual = "es";
+
+function cambiarIdioma() {
+    idiomaActual = idiomaActual === "es" ? "en" : "es";
+    document.querySelectorAll("[data-es]").forEach(el => {
+        el.textContent = el.getAttribute(`data-${idiomaActual}`);
+    });
+}
+</script>
+</body>
+</html>
